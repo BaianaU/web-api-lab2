@@ -1,3 +1,5 @@
+package com.BaianaU.web_api_lab2.controller
+
 import com.BaianaU.web_api_lab2.model.CustomUser
 import com.BaianaU.web_api_lab2.repository.CustomUserRepository
 import org.springframework.beans.factory.annotation.Autowired
