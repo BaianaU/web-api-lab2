@@ -1,4 +1,4 @@
-package com.BaianaU.web_api_lab2.model
+package com.BaianaU.web_api_lab2.model.user
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
