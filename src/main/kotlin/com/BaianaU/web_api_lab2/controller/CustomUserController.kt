@@ -15,9 +15,9 @@ class CustomUserController @Autowired constructor(
 ) {
 
     @GetMapping
-    fun getAllUsers(): ResponseEntity<List<CustomUser>> {
-        val users: List<CustomUser> = customUserRepository.findAll()
-        return ResponseEntity.ok(users)
+    fun getUser(name: String, password: String): ResponseEntity<CustomUser> {
+        val user: CustomUser = customUserRepository.findByNameAndPassword(name, password)
+        return ResponseEntity.ok(user)
     }
 
     @PostMapping
