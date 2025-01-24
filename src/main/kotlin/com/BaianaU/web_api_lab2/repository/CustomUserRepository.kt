@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
 
 interface CustomUserRepository: JpaRepository <CustomUser, Long>{
-    @Query("SELECT u FROM CustomUser u WHERE u.username = :username AND u.password = :password")
-    fun findByNameAndPassword(@Param("username") username: String,
-                              @Param("password") password: String): CustomUser
+    @Query("SELECT u FROM CustomUser u WHERE u.username = :username")
+    fun findByNameAndPassword(@Param("username") username: String): CustomUser
 }
